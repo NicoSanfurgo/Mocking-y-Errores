@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Carrito</h1>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Code</th>
+                <th scope="col">Price</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Category</th>
+                <th scope="col">Qty</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each cart.products}}
+                <tr>
+                    <td> {{this.product.id}}            </td>
+                    <td> {{this.product.title}}         </td>
+                    <td> {{this.product.description}}   </td>
+                    <td> {{this.product.code}}          </td>
+                    <td> {{this.product.price}} ARS     </td>
+                    <td> {{this.product.stock}}         </td>
+                    <td> {{this.product.category}}      </td>
+                    <td> {{this.quantity}}      </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

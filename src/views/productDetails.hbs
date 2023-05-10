@@ -1,0 +1,12 @@
+<div class="container">
+    {{#with product}}
+        <p>{{id}}</p>
+        <p>{{title}}</p>
+        <p>{{description}}</p>
+        <p>{{code}}</p>
+        <p>{{price}} ARS</p>
+        <p>{{stock}}</p>
+        <p>{{category}}</p>
+        <a href="/edit/{{this.id}}" class="btn btn-dark"><i class="bi bi-cart-plus-fill"></i></a></td>
+    {{/with}}
+</div>

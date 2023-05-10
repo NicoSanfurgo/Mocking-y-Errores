@@ -1,0 +1,28 @@
+<div class="container my-3 py-3">
+    <h2 class="my-3">Register</h2>
+    <form  action="/session/register" method="post">
+        <div class="mb-3">
+            <label for="first_name" class="form-label">Primer Nombre</label>
+            <input type="text" class="form-control" name="first_name" aria-describedby="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Apellido</label>
+            <input type="text" class="form-control" name="last_name" aria-describedby="lastname" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo</label>
+            <input type="email" class="form-control" name="email" aria-describedby="email" required>
+        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Edad</label>
+            <input type="number" class="form-control" name="age" aria-describedby="age" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p class="my-3">¿Ya tienes una cuenta? <a href="/login">Log in</a></p>
+    </form>
+</div>

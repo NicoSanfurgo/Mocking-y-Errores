@@ -1,0 +1,49 @@
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container text-right">
+            <p class="text-secondary-emphasis" id="welcome">Bienvenido {{user.name}} || <strong>Rol</strong>: {{user.role}}</p>
+            <a class="btn btn-danger" href="/session/logout"><i class="bi bi-x-circle-fill"></i> Logout</a>  
+        </div>
+    </nav>
+<div class="container">
+    <h1>Lista de productos </h1>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Code</th>
+                <th scope="col">Price</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Category</th>
+                <th scope="col" colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products.docs}}
+                <tr>
+                    <td> {{this.id}}            </td>
+                    <td> {{this.title}}         </td>
+                    <td> {{this.description}}   </td>
+                    <td> {{this.code}}          </td>
+                    <td> {{this.price}} ARS     </td>
+                    <td> {{this.stock}}         </td>
+                    <td> {{this.category}}      </td>
+                    <td> <a href="/products/{{this.id}}" class="btn btn-info"><i class="bi bi-info-circle"></i></a></td>
+                    <td> <button class="btn btn-dark addProduct" onClick="buttonAdd(this)" type="button" pid="{{this.id}}"><i class="bi bi-cart-plus-fill"></i></button></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <div class="d-inline-flex flex-direction-row justify-content-center align-self-center">
+        {{#if products.hasPrevPage}}
+            <button type="button" onClick="prevPage()" class="btn btn-primary mx-3">&#60; Previous</button>
+        {{/if}}
+        <span class="lead mx-3" id="page">{{products.page}}</span>
+        {{#if products.hasNextPage}}
+            <button type="button" onClick="nextPage()" class="btn btn-primary mx-3">Next &#62;</button>
+        {{/if}}
+    </div>
+
+    <script src="./js/main.js"></script>
+</div>

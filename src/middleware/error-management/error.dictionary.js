@@ -1,0 +1,9 @@
+export const ErrorList = {
+    DATABASE_ERROR: 1,
+    INVALID_TYPE_ERROR: 2,
+    INVALID_PARAMS: 3,
+    ACCESS_FORBIDDEN: 4,
+    NOT_FOUND: 5,
+    USER_ALREADY_EXISTS: 6,
+    EMPTY_CART: 7
+}
